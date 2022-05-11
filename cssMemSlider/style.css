@@ -8,28 +8,34 @@ img {
   width: 100%;
 }
 .slider-wrapper {
-  max-width: 1200px;
+  padding-top: 20px;
+  max-width: 500px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
-
-.slider-img {
-  width: 500px;
-  height: 500px;
   overflow: hidden;
 }
 
-.nav-button {
+.slides {
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.bar {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   border: 1px solid black;
   cursor: pointer;
+  margin-left: 9px;
 }
 
 .slide {
-  width: 500px;
+  width: 20%;
+  transition: 0.6s;
+}
+
+.slide img {
+  width: 100%;
   height: 100%;
 }
 
@@ -37,6 +43,35 @@ img {
   display: flex;
 }
 
-.slider-buttons {
+input[name="radio"] {
   visibility: hidden;
+  position: absolute;
+}
+
+.nav-container {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#r1:checked ~ .s1 {
+  margin-left: 0;
+}
+
+#r2:checked ~ .s1 {
+  margin-left: -20%;
+}
+
+#r3:checked ~ .s1 {
+  margin-left: -40%;
+}
+
+#r4:checked ~ .s1 {
+  margin-left: -60%;
+}
+
+.text2,
+.text3,
+.text4 {
+  opacity: 0;
 }
